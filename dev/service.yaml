@@ -13,6 +13,6 @@ spec:
     targetPort: 8080
   selector:
     app: my-app
-  type: LoadBalancer
+  type: ClusterIP
 status:
   loadBalancer: {}

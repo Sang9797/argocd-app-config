@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: my-app-deployment
+  name: my-app-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-app
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - image: 191197/go-monitor:v1.0.0
+        name: go-monitor
+        ports:
+        - containerPort: 8080
+        resources: {}
+status: {}

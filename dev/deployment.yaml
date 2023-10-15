@@ -6,7 +6,7 @@ metadata:
     app: my-app-deployment
   name: my-app-deployment
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: my-app
@@ -18,7 +18,7 @@ spec:
         app: my-app
     spec:
       containers:
-      - image: 191197/go-monitor:v1.0.0
+      - image: 191197/go-monitor:63
         name: go-monitor
         ports:
         - containerPort: 8080
